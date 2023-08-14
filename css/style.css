@@ -431,6 +431,7 @@ footer .footer-links{
     list-style: none;
     display: flex;
     gap: 15px;
+    flex-wrap: wrap;
     /* margin: 15px 0; */
 }
 footer h2{
