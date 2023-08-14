@@ -1,0 +1,462 @@
+html{
+font-family: 'Open Sans', 'Roboto Condensed', Roboto;
+font-size: 14px;
+}
+body{
+    margin: 0;
+    padding: 0;
+}
+button, input, select, textarea{
+    font-family: inherit;
+    font-size:100%;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+p,h1,h2,h3,h4,h5,h6{
+    padding: 0;
+    margin: 0;
+}
+
+ul, ol{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+}
+
+/* Site Header Section Start  */
+#site-header{
+    background-color: #f8cb2e;
+    padding:15px 0;
+    box-sizing: border-box;
+    height: 55px;
+}
+#site-header .fa-champagne-glasses{
+    font-size: 1.6rem;
+    color: #ee5007;
+}
+#site-header p{
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+/* Site Header Section End  */
+
+main{
+    position: relative;
+    top: 0;
+    left: 0;
+}
+/* Navbar Section Start  */
+.sticky-top{
+    position: absolute;
+    left: 0;
+    z-index: 1111;
+    width: 100%;
+}   
+.navbar-brand{
+    font-size: 2rem;
+    font-weight: bold;
+}
+.nav-link{
+    color:white;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+.navbar-nav .nav-link.active, .navbar-nav .nav-link:focus, .navbar-nav .nav-link:hover{
+    color:#ee5007;
+}
+.navbar-yellow{
+    background-color: yellow !important;
+}
+/* Navbar Section End  */
+
+/* Header Section Start  */
+#home{
+    height: calc(100vh - 55px);
+    position: relative;
+    top:0;
+    left:0;
+}
+#home > video{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    z-index: 1;
+    
+}
+#home-content{
+    position: relative;
+    z-index: 1;
+    height: 100%;
+}
+.container{
+    height: 100%;
+}
+
+#home-content h1{
+    color:white;
+    font-size: 5rem;
+    font-weight: bold;
+}
+#home-content small{
+    color:white;
+    font-size:1.5rem;
+    font-weight: 600;
+}
+#home-content .btn{
+    background-color:#ee5007;
+    color:white;
+    font-weight: bold;
+    padding: 8px 20px;
+    border-radius: 50px;
+}
+#home-content h2{
+    font-size: 1.5rem;
+    color:white;
+}
+#home-content .fa-clock,#home-content .fa-location-dot, #home-content .fa-instagram, #home-content .fa-twitter, #home-content .fa-facebook{
+    font-size: 1.5rem;
+    color: #ee5007;
+}
+/* Header Section End  */
+
+/* About Section Start  */
+#about{
+    position: relative;
+    background:url('../images/edward-unsplash-blur.jpg') top left/cover no-repeat;
+    color: white;
+    text-align: justify;
+    top:0;
+}
+#about h1{
+    font-size: 3rem;
+    font-weight: bold;
+}
+#about #about-content-wrapper{
+    width: 100%;
+    position: relative;
+}
+#about img{
+    object-fit: cover;
+    width: 100%;
+    border-radius: 30px;
+}
+#about-text-info{
+    position: absolute;
+    z-index: 1;
+    background-color: white;
+    opacity: 1;
+    bottom:10%;
+    left:5%;
+    right: 5%;
+    color:black;
+    min-width: 90%;
+    border-radius: 20px;
+    text-align: left;
+}
+#about-text-info .fa-circle-user{
+    font-size: 3rem;
+    color:#ee5007;
+}
+#about-text-info h2{
+    font-weight: bold;
+    font-size: 2.5rem;
+}
+/* About Section End  */
+
+/* Artists Section Start  */
+#artists{
+    position: relative;
+    top:0;
+}
+#artists h1{
+    font-size: 3rem;
+    font-weight: bold;
+}
+#artists img{
+    border-radius: 20px;
+    /* object-fit: cover; */
+    width: 100%;
+    height: 95%;
+    position: relative;
+}
+.image-wrapper{
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+.image-content{
+    position: absolute;
+    z-index: 2;
+    bottom:0;
+    width: 90%;
+    height: auto;
+    opacity: 0;
+    padding: 20px;
+    background-color: rgba(248, 203, 46);
+    border-radius: 20px;
+    color:#717275;
+    font-size: 1.2rem;
+    transition: 0.5s ease-in, transform 0.5s;
+}
+.image-wrapper:hover .image-content{
+    opacity: 0.8;
+    transform: translateY(-100px);
+}
+.image-wrapper:hover .image-content#artist-content-second{
+    transform: translateY(-30px);
+}
+.image-wrapper:hover .image-content#artist-content-third{
+    transform: translateY(-30px);
+}
+.image-content hr{
+    opacity: 0.3;
+}
+.image-content strong{
+    color:white;
+    font-weight: bold;
+}
+
+/* Artists Section End  */
+
+/* Schedule Section Start  */
+#schedule{
+    background: url('../images/nainoa-shizuru-unsplash-blur.jpg') top center/cover no-repeat;
+    color:white;
+}
+#schedule-content{
+    display: grid;
+    grid-template-columns: 1fr repeat(3,2fr);
+    background-color: grey;
+    border: 1px solid grey;
+    border-radius: 20px;
+    padding: 0;
+    gap:0.8px;
+    position: relative;
+    box-shadow: 0 0 8px 1px white;
+}
+#schedule-content > div:nth-child(n+1):nth-child(-n+4){
+    background-color: #ee5007;
+}
+#schedule-content > div:nth-child(1){
+    border-top-left-radius:21px;
+}
+#schedule-content > div:nth-child(4){
+    border-top-right-radius:21px;
+}
+#schedule-content > div:nth-child(13){
+    border-bottom-left-radius:21px;
+}
+#schedule-content > div:nth-child(16){
+    border-bottom-right-radius:21px;
+}
+.schedule-item{
+    padding: 30px 0;
+    background-color: #212529;
+}
+#schedule h1{
+    font-size: 3rem;
+    font-weight: bold;
+}
+#schedule h2{
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+#schedule h3{
+    font-size: 2rem;
+    line-height: 50px;
+    position: relative;
+}
+#schedule h4, #schedule h5{
+    font-size: 1.2rem;
+    font-weight: 400;
+    line-height: 25px;
+    position: relative;
+}
+#schedule-image-first{
+    position: relative;
+} 
+#schedule-image-first::before{
+    position: absolute;
+    content: '';
+    top:0;
+    right:0;
+    left: 0;
+    bottom: 0;
+    background: url('../images/artists/joecalih-UmTZqmMvQcw-unsplash.jpg') left center no-repeat;
+    background-size: cover;
+    opacity: 0.6;
+}
+#schedule-image-second{
+    position: relative;
+}
+#schedule-image-second::before{
+    position: absolute;
+    content: '';
+    top:0;
+    right:0;
+    left: 0;
+    bottom: 0;
+    background: url('../images/artists/abstral-official-bdlMO9z5yco-unsplash.jpg') left center/cover no-repeat;
+    opacity: 0.6;
+}
+#schedule-image-third{
+    position: relative;
+}
+#schedule-image-third::before{
+    position: absolute;
+    content: '';
+    top:0;
+    right:0;
+    left: 0;
+    bottom: 0;
+    background: url('../images/artists/soundtrap-rAT6FJ6wltE-unsplash.jpg') left center/cover no-repeat;
+    opacity: 0.6;
+}
+/* Schedule Section End  */
+
+/* Pricing Section Start  */
+#pricing{
+    line-height: 30px;
+    color: #717275;
+    font-size: 1.2rem;
+    position: relative;
+}
+#pricing h1{
+    font-size: 3rem;
+    font-weight: bold;
+    color: black;
+}
+#pricing .border-5{
+    border-style: dotted!important;
+}
+#pricing h2{
+    color: black;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+#pricing strong{
+    font-size: 2rem;
+    margin-left: 20px;
+}
+.pricing-content-wrapper{
+    position: relative;
+}
+.pricing-content{
+    background-color: #ee5007;
+    color: white;
+    position: absolute;
+    top:-110px;
+    right:-7%;
+    border-radius: 50%;
+    width: 120px;
+    height: 105px;
+    text-align: center;
+    line-height: 30px;
+    padding-top: 20px;
+}
+#pricing a{
+    color:#ee5007;
+}
+#pricing a::after{
+    font-family: "FontAwesome";
+   content: "\f105";
+   padding-left: 13px;
+   font-weight:900;
+   text-decoration: none;
+}
+/* Pricing Section End  */
+
+/* Contact Section Start  */
+#contact{
+    position: relative;
+}
+#contact h1{
+    font-size: 3.3rem;
+    font-weight: bold;
+}
+#contact .btn-group{
+    background-color: #f0f8ff;
+    padding: 10px 30px;
+    border-radius: 50px;
+}
+.contact-nav-button{
+    color: gray;
+    font-size: 1.6rem;
+}
+#contact-form{
+    color:grey;
+    border-radius: 10px;
+    box-shadow: 0 0 20px 5px rgba(0,0,0,.175);
+}
+#contact-form .btn{
+    background-color: #ee5007;
+    border: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 20px;
+}
+/* Contact Section End  */
+
+ /* Footer Section Start  */
+footer{
+    position: relative;
+    background-color: black;
+    color: white;
+    font-size: 1.2rem;
+    line-height:35px;
+    font-weight: 400;
+}
+footer #footer-site{
+    background-color: #ee5007;
+    color: white;
+    padding: 30px 0;
+}
+#footer-site h1{
+    font-size: 3rem;
+    font-weight: bold;
+}
+footer .fa-brands{
+    padding: 10px;
+    margin: 5px;
+    font-weight: 500;
+    font-size: 1.2rem;
+}
+footer .footer-links{
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    /* margin: 15px 0; */
+}
+footer h2{
+    color: #f8cb2e;
+}
+.footer-links a{
+    color:white;
+}
+.footer-links a:focus,.footer-links a:hover{
+    color: #ee5007;
+}
+.footer-bottom{
+    border-top: 1px solid #1f1c1c;
+    margin-top:50px;
+}
+ /* Footer Section End   */
+
+
+@media (max-width:400px) {
+    .image-wrapper:hover .image-content{
+        transform: translateY(-50px);
+    }
+    .image-wrapper:hover .image-content#artist-content-second{
+        transform: translateY(-20px);
+    }
+    .image-wrapper:hover .image-content#artist-content-third{
+        transform: translateY(-20px);
+    }   
+}
